@@ -398,7 +398,7 @@ Transform:
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1503574224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &216755143
 MonoBehaviour:
@@ -412,7 +412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887112a3e6e5c3140b9e40d2fa4a3503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinList: 
 --- !u!1 &476828109
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +962,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1503574224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &784190920
 SortingGroup:
@@ -1024,7 +1023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887112a3e6e5c3140b9e40d2fa4a3503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinList: 
 --- !u!1 &829191032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1429,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 784190919}
+  - {fileID: 216755142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1553494444
@@ -1760,7 +1760,5 @@ SceneRoots:
   - {fileID: 1630069485}
   - {fileID: 476828110}
   - {fileID: 1503574224}
-  - {fileID: 784190919}
-  - {fileID: 216755142}
   - {fileID: 829191034}
   - {fileID: 1191548266}
