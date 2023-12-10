@@ -16,6 +16,6 @@ public class EndDisplay : MonoBehaviour      // Part3: Attached to HUD canvas ob
     {
         totalText.text = "Level Time Limit: " + timer.TotalTime().ToString("F2");   // Part3: Displays level time limit to compare.
         timerText.text = "Time Remaining: " + timer.CurrentTime().ToString("F2");   // Part3: Displays time left.
-        coinText.text = "Total Coins " + coins.CoinAmount().ToString() + " of 10";   // Part3: Displays text + Collected coin int.
+        coinText.text = "Total Coins " + coins.CoinAmount().ToString() + " out of 10";   // Part3: Displays text + Collected coin int.
     }
 }
