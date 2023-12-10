@@ -19,8 +19,6 @@ public class LevelEnd : MonoBehaviour       // Part2c: Attached to EndTrigger ob
         {
             timer.StopTimer();              // Part2c: Activate StopTimer Method in Timer script.
             playerMovement.PlayerStop();    // Part2c: Activate PlayerStop Method in PlayerMovement script.
-
-            // here, need to add an overlay for showing coins collected out of total and time left. //
         }
     }
 }

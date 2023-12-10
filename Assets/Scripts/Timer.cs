@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Timer : MonoBehaviour          // Part2b: Attached to Timer object.
+public class Timer : MonoBehaviour          // Part3: Attached to Timer Display canvas object. TMP HUD element.
 {
     public float totalTime = 10f;           // Part2b: Starting value for the timer. public as stated in assignment.
     private float timeLeft;                 // Part2b: Holds remaining time from update.

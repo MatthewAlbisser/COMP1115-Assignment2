@@ -55,9 +55,9 @@ public class PlayerMovement : MonoBehaviour     // Part1: Attached to player obj
             GetComponent<Rigidbody2D>().velocity = speed * dir;     // Part1: Sets speed of the Player rigidbody component.
         }
     }
-    public void PlayerStop()    // Part2c: When method is activated...
+    public void PlayerStop()        // Part2c: When method is activated...
     {
-        canMove = false;        // Part2c: Stop all player movement.
-        rb.velocity = Vector2.zero;
+        canMove = false;            // Part2c: Deactivates player movement buttons.
+        rb.velocity = Vector2.zero; // Part2c: Holds Player still, stops movement.
     }
 }
