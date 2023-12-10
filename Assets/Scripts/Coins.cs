@@ -20,4 +20,8 @@ public class Coins : MonoBehaviour                      // Part2a: Attached to a
         gameObject.SetActive(false);                    // Part2a: Remove coin from scene. Destroy(gameObject);
         Debug.Log("Total Coins Collected: " + coinList.Count);
     }
+    public int CoinAmount()
+    {
+        return coinList.Count;
+    }
 }

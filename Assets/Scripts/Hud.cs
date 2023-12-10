@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class HudScript : MonoBehaviour
+public class Hud : MonoBehaviour      // Part3: Attached to HUD canvas object.
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI timerText;       // Part3: Declares timer text display.
+    public TextMeshProUGUI coinText;        // Part3: Declares coin text display.
+    public Timer timer;                     // Part3: Declares Timer script.
+    public Coins coins;                     // Part3: Declares Coins script.
 
-    // Update is called once per frame
     void Update()
     {
-        
+        timerText.text = "TIME: " + timer.CurrentTime().ToString("F2"); // Part3: Displays text + timeLeft by 2 decimalpoints.
+        coinText.text = "COINS:" + coins.CoinAmount().ToString();       // Part3: Displays text + Collected coin int.
     }
 }
