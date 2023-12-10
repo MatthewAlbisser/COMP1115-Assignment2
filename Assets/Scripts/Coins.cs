@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coins : MonoBehaviour                      // Part2a: Attached to all coins.
+public class Coins : MonoBehaviour                      // Part2a: Attached to all Coin objects.
 {
     public static List<int> coinList = new List<int>(); // Part2a: Declares a static list for coin collection.
     private int coinValue = 1;                          // Part2a: Declares an int value of 1 to each coin.
