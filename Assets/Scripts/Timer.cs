@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour          // Part3: Attached to Timer Display canvas object. TMP HUD element.
 {
-    public float totalTime = 10f;           // Part2b: Starting value for the timer. public as stated in assignment.
-    private float timeLeft;                 // Part2b: Holds remaining time from update.
-    //private float doorTime;                 // Part2b: Holds remaining time from update.
+    public float totalTime = 60.0f;         // Part2b: Starting value for the timer. public as stated in assignment.
+    public float timeLeft;                 // Part2b: Holds remaining time from update.
+
+    public PlayerMovement playerMovement;   // Part2c: Declares PlayerMovement script.
+    public GameObject HudDisplay;           // Part3: Declares Hud canvas object.
+    public GameObject EndDisplay;           // Part3: Declares end display canvas object.
+    public GameObject FailDisplay;           // Part3: Declares end display canvas object.
 
     private bool timerOn = false;            // Part2c: Sets bool for timer. Starts off.
 
@@ -22,17 +26,20 @@ public class Timer : MonoBehaviour          // Part3: Attached to Timer Display 
             if (timeLeft > 0)                   // Part2b: If the timer is more then 0...
             {
                 timeLeft -= Time.deltaTime;     // Part2b: Decrease timeLeft by real time (in seconds).
-                Debug.Log("Timer:" + timeLeft);
             }
             else if (timeLeft <= 0.01f)         // Part2b: If the timer is equal or less then 0.01...
             {
-                Debug.Log("GAME OVER");         // Part2b: change scene or add overlay for game overscreen/stop controls
-                timerOn = false;                // Part2b: Stops the update from activating game over constantly.
+                StopTimer();                    // Part2c: Activate StopTimer Method in Timer script.
+                playerMovement.PlayerStop();    // Part2c: Activate PlayerStop Method in PlayerMovement script.
+                HudDisplay.SetActive(false);    // Part3: Deactivates gameplay hud.
+                EndDisplay.SetActive(true);     // Part3: Activates end display.
+                FailDisplay.SetActive(true);     // Part3: Activates end display.
+
             }
         }
     }
 
-    public void StartTimer()    // Part2c: When method is activated...
+        public void StartTimer()    // Part2c: When method is activated...
     {
         timerOn = true;         // Part2c: Start up the timer.
     }
@@ -51,9 +58,4 @@ public class Timer : MonoBehaviour          // Part3: Attached to Timer Display 
     {
         return totalTime;          // Part3: Returns float for total time to display.
     }
-//    public float DoorTime()
-//    {
-//        return doorTime;          // Part3: Returns float for open door time to display.
-//    }
-
 }

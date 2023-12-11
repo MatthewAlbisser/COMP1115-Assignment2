@@ -41,15 +41,15 @@ public class PlayerMovement : MonoBehaviour     // Part1: Attached to player obj
             }
 
 
-            if (Input.GetKey(KeyCode.LeftShift))                    // extra: When Lshift is pressed...
+            if (Input.GetKey(KeyCode.LeftShift))                    // Extra: When Lshift is pressed...
             {
-                speed = 10f;                                        // extra: Speed is doubled.
+                speed = 10f;                                        // Extra: Speed is doubled.
             }
-            else if (!Input.GetKey(KeyCode.RightShift))             // extra: When Lshift is not pressed...
+            else if (!Input.GetKey(KeyCode.RightShift))             // Extra: When Lshift is not pressed...
             {
-                speed = 5f;                                         // extra: Speed is reverted back.
+                speed = 5f;                                         // Extra: Speed is reverted back.
             }
-            dir.Normalize();                                        // extra: Scales speed to be consistant in diagnal directions.
+            dir.Normalize();                                        // Extra: Scales speed to be consistant in diagnal directions.
 
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;     // Part1: Sets speed of the Player rigidbody component.
