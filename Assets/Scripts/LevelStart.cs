@@ -5,15 +5,22 @@ using UnityEngine;
 public class LevelStart: MonoBehaviour       // Extra: Attached to StartTrigger object.
 {
     public Timer timer;                     // Extra: Declares Timer script.
+    private bool inRange;
 
-    void OnTriggerEnter2D(Collider2D other) // Extra: If this trigger collides with...
+    void Update()
     {
-        if (other.CompareTag("Player"))             // Extra: An object with the player tag...
+        if (inRange)            // If in range is activated...
         {
-            timer.StartTimer();                     // Extra: Activate StartTimer Method in Timer script.
-            //Destroy(this);
-            
+            if (Input.GetKeyDown(KeyCode.E))    // If pressing E...
+            {
+                timer.StartTimer();                     // Extra: Activate StartTimer Method in Timer script.
+                gameObject.SetActive(false);            // Trigger attached to this script is deactivated.
+            }
         }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)  // When anything (player) is inside trigger area...
+    {
+        inRange = true;         // Inrange is activated.
     }
 
 }

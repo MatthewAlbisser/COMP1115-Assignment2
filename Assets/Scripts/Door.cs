@@ -9,24 +9,24 @@ public class Door : MonoBehaviour
 
     void Update()
     {
-        if (inRange)
+        if (inRange)                                // If in range is activated...
         {
-            if (key.hasKey)
+            if (key.hasKey)                         // If has key...
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E))    // If pressing E...
                 {
-                    OpenDoor();
+                    OpenDoor();                     // Activates OpenDoor method.
                 }
             }
         }
     }
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)  // When anything (player) is inside trigger area...
     {
-        inRange = true;
+        inRange = true;         // Inrange is activated.
     }
 
     void OpenDoor()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false);    // Object attached to this script is deactivated.
     }
 }
