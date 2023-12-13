@@ -14,6 +14,7 @@ public class LevelEnd : MonoBehaviour       // Part2c: Attached to EndTrigger ob
     {
     if (other.CompareTag("Player"))    // Part2c: An object with the player tag...
         {
+            playerMovement.isMoving = false;
             timer.StopTimer();              // Part2c: Activate StopTimer Method in Timer script.
             playerMovement.PlayerStop();    // Part2c: Activate PlayerStop Method in PlayerMovement script.
             HudDisplay.SetActive(false);    // Part3: Deactivates gameplay hud.

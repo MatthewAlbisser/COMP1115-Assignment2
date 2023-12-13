@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    private bool inRange;
-    public Key key;
+    private bool inRange;           // Bool for in range to interact.
+    public Key key;                 // Declares Key script.
 
     void Update()
     {
-        if (inRange)                                // If in range is activated...
+        if (inRange)                                // If door is in range is activated...
         {
-            if (key.hasKey)                         // If has key...
+            if (key.hasKey)                         // If player has key...
             {
-                if (Input.GetKeyDown(KeyCode.E))    // If pressing E...
+                if (Input.GetKeyDown(KeyCode.E))    // If player presses E...
                 {
                     OpenDoor();                     // Activates OpenDoor method.
                 }
@@ -24,7 +24,6 @@ public class Door : MonoBehaviour
     {
         inRange = true;         // Inrange is activated.
     }
-
     void OpenDoor()
     {
         gameObject.SetActive(false);    // Object attached to this script is deactivated.
