@@ -17,9 +17,9 @@ public class Hud : MonoBehaviour      // Part3: Attached to HUD canvas object.
         coinText.text = "COINS:" + coins.CoinAmount().ToString();       // Part3: Displays text + Collected coin int.
     }
 
-    public void KeyFound()
+    public void KeyFound()      // Part3: When KeyFound method is activated from Key script...
     {
-        Transform keyDisplay = transform.Find("KeyDisplay");
-        keyDisplay.gameObject.SetActive(true);
+        Transform keyDisplay = transform.Find("KeyDisplay");    // Part3: Activate KeyFound method from Hud script
+        keyDisplay.gameObject.SetActive(true);                  // Part3: Activate KeyFound method from Hud script
     }
 }
